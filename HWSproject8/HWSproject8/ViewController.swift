@@ -113,12 +113,13 @@ class ViewController: UIViewController {
         }
         
         
-        if letterButtons.isEmpty {
+        if activatedButtons.capacity == 20 {
             let ac = UIAlertController(title: "Nice!", message: "Are you ready for next level?", preferredStyle: .Alert)
             ac.addAction(UIAlertAction(title: "Let's go!", style: .Default, handler: levelUp))
             presentViewController(ac, animated: true, completion: nil)
         }
         
+        print(activatedButtons)
     }
     
     func levelUp(action:UIAlertAction!) {
